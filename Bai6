@@ -2,5 +2,13 @@ using System;
 
 class Program
 {
-
+    static double TinhTong(int n)
+    {
+        double sum = 0;
+        for (int i = 1; i <= n; i++)
+        {
+            sum += 1.0 / (i * (i + 1));
+        }
+        return sum;
+    }
 }
