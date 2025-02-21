@@ -2,21 +2,20 @@ using System;
 
 class Program
 {
-    static double TinhTongPhanSo(int n)
-    {
-        double sum = 0;
-        for (int i = 1; i <= n; i++)
-        {
-            sum += 1.0 / i;
-        }
-        return sum;
-    }
     static void Main()
     {
-        Console.Write("Nhap so nguyen n: ");
+        Console.Write("Nhap n: ");
         int n = int.Parse(Console.ReadLine());
 
-        double sum = TinhTongPhanSo(n);
-        Console.WriteLine($"Tong S({n}) = {sum:F6}");
+        int so_luong_chu_so_141 = 0;
+
+        int temp = n;
+        while (temp > 0)
+        {
+            so_luong_chu_so_141++;
+            temp /= 10;
+        }
+
+        Console.WriteLine($"So luong chu so cua {n} la: {so_luong_chu_so_141}");
     }
 }
