@@ -2,20 +2,6 @@ using System;
 
 class Program
 {
-    static int UCLN(int a, int b)
-    {
-        while (b != 0)
-        {
-            int temp_138 = b;
-            b = a % b;
-            a = temp_138;
-        }
-        return a;
-    }
-    static int TimBCNN(int a, int b)
-    {
-        return (a * b) / UCLN(a, b);
-    }
     static void Main()
     {
         Console.Write("Nhap so nguyen duong a: ");
@@ -24,7 +10,24 @@ class Program
         Console.Write("Nhap so nguyen duong b: ");
         int b = int.Parse(Console.ReadLine());
 
-        int bcnn_138 = TimBCNN(a, b);
+        if (a <= 0 || b <= 0)
+        {
+            Console.WriteLine("Vui long nhap hai so nguyen duong!");
+            return;
+        }
+
+        int x = a, y = b;
+        while (y != 0)
+        {
+            int temp_138 = y;
+            y = x % y;
+            x = temp_138;
+        }
+        int ucln_138 = x;
+        int bcnn_138 = (a * b) / ucln_138;
+
         Console.WriteLine($"Boi chung nho nhat cua {a} va {b} la: {bcnn_138}");
     }
 }
+
+
