@@ -6,4 +6,12 @@ class Program
     {
         return (n * (n + 1) * (2 * n + 1)) / 6;
     }
+    static void Main()
+    {
+        Console.Write("Nhap so nguyen n: ");
+        int n = int.Parse(Console.ReadLine());
+
+        int sum = TinhTongBinhPhuong(n);
+        Console.WriteLine($"Tong S({n}) = {sum}");
+    }
 }
