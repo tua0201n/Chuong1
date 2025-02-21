@@ -2,25 +2,26 @@ using System;
 
 class Program
 {
-    static double TinhLuyThua(double x, int n)
-    {
-        double ketQua = 1;
-        for (int i = 0; i < n; i++)
-        {
-            ketQua *= x;
-        }
-        return ketQua;
-    }
     static void Main()
     {
-        Console.Write("Nhap co so x: ");
-        double x = double.Parse(Console.ReadLine());
+        Console.Write("Nhap so nguyen duong a: ");
+        int a_138 = int.Parse(Console.ReadLine());
 
-        Console.Write("Nhap so mu n: ");
-        int n = int.Parse(Console.ReadLine());
+        Console.Write("Nhap so nguyen duong b: ");
+        int b_138 = int.Parse(Console.ReadLine());
 
-        double result = TinhLuyThua(x, n);
-        Console.WriteLine($"{x}^{n} = {result}");
+        while (a_138 != b_138)
+        {
+            if (a_138 > b_138)
+            {
+                a_138 -= b_138;
+            }
+            else
+            {
+                b_138 -= a_138;
+            }
+        }
+
+        Console.WriteLine($"Uoc so chung lon nhat la: {a_138}");
     }
-
 }
