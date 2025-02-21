@@ -2,16 +2,20 @@ using System;
 
 class Program
 {
-     static int TinhTong(int n)
-      {
-          return (n * (n + 1)) / 2;
-      }
-     static void Main()
-     {
-         Console.Write("Nhap so nguyen n: ");
-         int n = int.Parse(Console.ReadLine());
+    static void Main()
+    {
+        Console.Write("Nhap n: ");
+        int n = int.Parse(Console.ReadLine());
 
-         int sum_138 = TinhTong(n);
-         Console.WriteLine($"Tong S({n}) = {sum_138}");
-     }
+        long giaiThua = 1;
+        long tong_138 = 0; 
+
+        for (int i = 1; i <= n; i++)
+        {
+            giaiThua *= i;
+            tong_138 += giaiThua;
+        }
+
+        Console.WriteLine($"Tong S(n) = {tong_138}");
+    }
 }
