@@ -11,5 +11,16 @@ class Program
         }
         return ketQua;
     }
+    static void Main()
+    {
+        Console.Write("Nhap co so x: ");
+        double x = double.Parse(Console.ReadLine());
+
+        Console.Write("Nhap so mu n: ");
+        int n = int.Parse(Console.ReadLine());
+
+        double result = TinhLuyThua(x, n);
+        Console.WriteLine($"{x}^{n} = {result}");
+    }
 
 }
