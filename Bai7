@@ -2,21 +2,18 @@ using System;
 
 class Program
 {
-    static double TinhTong(int n)
-    {
-        double sum = 0;
-        for (int i = 1; i <= n; i++)
-        {
-            sum += (double)i / (i + 1);
-        }
-        return sum;
-    }
     static void Main()
     {
-        Console.Write("Nhap so nguyen n: ");
-        int n = int.Parse(Console.ReadLine());
+        Console.Write("Nhap so nguyen 4 byte: ");
+        int n_138 = int.Parse(Console.ReadLine());
 
-        double sum = TinhTong(n);
-        Console.WriteLine($"Tong S({n}) = {sum:F6}");
+        if (n_138 > 0 && (n_138 & (n_138 - 1)) == 0)
+        {
+            Console.WriteLine($"{n_138} la so co dang 2^k.");
+        }
+        else
+        {
+            Console.WriteLine($"{n_138} khong phai la so co dang 2^k.");
+        }
     }
 }
