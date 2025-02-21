@@ -11,5 +11,18 @@ class Program
         }
         return tich;
     }
+    static void Main()
+    {
+        Console.Write("Nhap so nguyen n: ");
+        int n = int.Parse(Console.ReadLine());
 
+        if (n < 0)
+        {
+            Console.WriteLine("Vui long nhap so nguyen duong!");
+            return;
+        }
+
+        long result = TinhGiaiThua(n);
+        Console.WriteLine($"T({n}) = {result}");
+    }
 }
