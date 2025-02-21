@@ -18,11 +18,11 @@ class Program
                     continue;
                 }
 
-                bool la_so_nguyen_to_141 = true;
+                bool la_so_nguyen_to_138 = true;
 
                 if (n < 2)
                 {
-                    la_so_nguyen_to_141 = false;
+                    la_so_nguyen_to_138 = false;
                 }
                 else
                 {
@@ -30,13 +30,13 @@ class Program
                     {
                         if (n % i == 0)
                         {
-                            la_so_nguyen_to_141 = false;
+                            la_so_nguyen_to_138 = false;
                             break;
                         }
                     }
                 }
 
-                if (la_so_nguyen_to_141)
+                if (la_so_nguyen_to_138)
                     Console.WriteLine($"{n} la so nguyen to");
                 else
                     Console.WriteLine($"{n} khong phai so nguyen to");
