@@ -11,7 +11,7 @@ class Program
          Console.Write("Nhap so nguyen n: ");
          int n = int.Parse(Console.ReadLine());
 
-         int sum = TinhTong(n);
+         int sum_138 = TinhTong(n);
          Console.WriteLine($"Tong S({n}) = {sum}");
      }
 }
