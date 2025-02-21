@@ -12,6 +12,6 @@ class Program
          int n = int.Parse(Console.ReadLine());
 
          int sum_138 = TinhTong(n);
-         Console.WriteLine($"Tong S({n}) = {sum}");
+         Console.WriteLine($"Tong S({n}) = {sum_138}");
      }
 }
