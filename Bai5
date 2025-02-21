@@ -5,20 +5,24 @@ class Program
     static void Main()
     {
         Console.Write("Nhap so nguyen duong n: ");
-        int n = int.Parse(Console.ReadLine());
+        int n_138 = int.Parse(Console.ReadLine());
 
-        long tichUocSo_138 = TinhTichUocSo(n);
-        Console.WriteLine($"Tich tat ca uoc so cua {n} la: {tichUocSo_138}");
-    }
+        if (n_138 <= 0)
+        {
+            Console.WriteLine("Vui long nhap so nguyen duong!");
+            return;
+        }
 
-    static long TinhTichUocSo(int n)
-    {
-        long tich_138 = 1;
+        long tich_138 = 1; // Lưu tích của các ước số
+
         for (int i = 1; i <= n; i++)
         {
-            if (n % i == 0)
+            if (n_138 % i == 0) // Kiểm tra nếu i là ước của n
+            {
                 tich_138 *= i;
+            }
         }
-        return tich_138;
+
+        Console.WriteLine($"Tích các ước số của {n_138} là: {tich_138}");
     }
 }
