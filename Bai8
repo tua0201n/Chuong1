@@ -2,21 +2,31 @@ using System;
 
 class Program
 {
-    static double TinhTong(int n)
+    static void XuatKyTu(char bat_dau, char ket_thuc, bool inTheoDong)
     {
-        double sum = 0;
-        for (int i = 1; i <= n; i++)
+        for (char ky_tu_138 = bat_dau; ky_tu_138 <= ket_thuc; ky_tu_138++)
         {
-            sum += (double)(2 * i + 1) / (2 * i + 2);
+            if (inTheoDong)
+                Console.Write(ky_tu_138 + " ");
+            else
+                Console.WriteLine(ky_tu_138);
         }
-        return sum;
     }
+
     static void Main()
     {
-        Console.Write("Nhap so nguyen n: ");
-        int n = int.Parse(Console.ReadLine());
+        Console.Write("Ban muon in ky tu in hoa (H) hay in thuong (T)? ");
+        char lua_chon = char.ToUpper(Console.ReadKey().KeyChar);
+        Console.WriteLine();
 
-        double sum = TinhTong(n);
-        Console.WriteLine($"Tong S({n}) = {sum:F6}");
+        Console.Write("Ban muon hien thi theo dong (D) hay theo cot (C)? ");
+        char cach_xuat = char.ToUpper(Console.ReadKey().KeyChar);
+        Console.WriteLine();
+
+        char bat_dau = (lua_chon == 'H') ? 'A' : 'a';
+        char ket_thuc = (lua_chon == 'H') ? 'Z' : 'z';
+        bool inTheoDong = (cach_xuat == 'D');
+
+        XuatKyTu(bat_dau, ket_thuc, inTheoDong);
     }
 }
