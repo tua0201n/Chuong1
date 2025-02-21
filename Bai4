@@ -1,22 +1,15 @@
 using System;
+using System.Linq;
 
 class Program
 {
-    static double TinhTongPhanSo(int n)
-    {
-        double sum = 0;
-        for (int i = 1; i <= n; i++)
-        {
-            sum += 1.0 / (2 * i);
-        }
-        return sum;
-    }
     static void Main()
     {
-        Console.Write("Nhap so nguyen n: ");
+        Console.Write("Nhap n: ");
         int n = int.Parse(Console.ReadLine());
 
-        double sum = TinhTongPhanSo(n);
-        Console.WriteLine($"Tong S({n}) = {sum:F6}");
+        int chu_so_nho_nhat_141 = n.ToString().Min(c => c - '0');
+
+        Console.WriteLine($"Chu so nho nhat cua {n} la: {chu_so_nho_nhat_141}");
     }
 }
