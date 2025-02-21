@@ -11,5 +11,12 @@ class Program
         }
         return sum;
     }
+    static void Main()
+    {
+        Console.Write("Nhap so nguyen n: ");
+        int n = int.Parse(Console.ReadLine());
 
+        double sum = TinhTongPhanSo(n);
+        Console.WriteLine($"Tong S({n}) = {sum:F6}");
+    }
 }
