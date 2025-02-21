@@ -2,21 +2,29 @@ using System;
 
 class Program
 {
-    static double TinhTong(int n)
+    static int UCLN(int a, int b)
     {
-        double sum = 0;
-        for (int i = 1; i <= n; i++)
+        while (b != 0)
         {
-            sum += 1.0 / (i * (i + 1));
+            int temp_138 = b;
+            b = a % b;
+            a = temp_138;
         }
-        return sum;
+        return a;
+    }
+    static int TimBCNN(int a, int b)
+    {
+        return (a * b) / UCLN(a, b);
     }
     static void Main()
     {
-        Console.Write("Nhap so nguyen n: ");
-        int n = int.Parse(Console.ReadLine());
+        Console.Write("Nhap so nguyen duong a: ");
+        int a = int.Parse(Console.ReadLine());
 
-        double sum = TinhTong(n);
-        Console.WriteLine($"Tong S({n}) = {sum:F6}");
+        Console.Write("Nhap so nguyen duong b: ");
+        int b = int.Parse(Console.ReadLine());
+
+        int bcnn_138 = TimBCNN(a, b);
+        Console.WriteLine($"Boi chung nho nhat cua {a} va {b} la: {bcnn_138}");
     }
 }
