@@ -7,15 +7,15 @@ class Program
         Console.Write("Nhap n: ");
         int n = int.Parse(Console.ReadLine());
 
-        int so_luong_chu_so_141 = 0;
+        int so_luong_chu_so_138 = 0;
 
         int temp = n;
         while (temp > 0)
         {
-            so_luong_chu_so_141++;
+            so_luong_chu_so_138++;
             temp /= 10;
         }
 
-        Console.WriteLine($"So luong chu so cua {n} la: {so_luong_chu_so_141}");
+        Console.WriteLine($"So luong chu so cua {n} la: {so_luong_chu_so_138}");
     }
 }
